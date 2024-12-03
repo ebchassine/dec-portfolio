@@ -26,16 +26,16 @@ function Layout({ children, sidebar }) {
   const heroOpacity = Math.max(0, 1 - scrollY / 200);
 
   return (
-    <div className="flex h-screen bg-gray-900 text-primary font-mono">
-      <div className="w-1/3 h-full bg-black border-r border-primary/20 p-4 overflow-y-auto">
+    <div className="flex h-screen bg-background text-text font-mono">
+      <div className="w-1/3 h-full bg-header-primary border-r border-highlight p-4 overflow-y-auto">
         {sidebar}
       </div>
       <div className="w-2/3 h-full overflow-y-auto" ref={mainContentRef}>
         <div className="sticky top-0 h-screen flex justify-center items-center z-10" style={{ opacity: heroOpacity }}>
-          <div className="absolute inset-0 bg-black opacity-80"></div>
-          <h1 className="text-5xl font-bold relative z-20">PORTFOLIO</h1>
+          <div className="absolute inset-0 bg-header-secondary opacity-80"></div>
+          <h1 className="text-5xl font-bold relative z-20 text-highlight">PORTFOLIO</h1>
         </div>
-        <div className="relative z-20 bg-black p-8 min-h-screen">
+        <div className="relative z-20 bg-background p-8 min-h-screen">
           {children}
         </div>
       </div>

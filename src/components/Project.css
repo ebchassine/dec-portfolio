@@ -1,0 +1,25 @@
+.project-container {
+    position: relative;
+  }
+  
+  .project-feather {
+    background: radial-gradient(circle at center, transparent 0%, rgba(190, 231, 184, 0.4) 100%);
+    filter: blur(30px);
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .project-container:hover .project-feather {
+    animation: featherPulse 2s infinite alternate;
+  }
+  
+  @keyframes featherPulse {
+    0% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1.4);
+    }
+  }
+  
+  
